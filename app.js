@@ -11,4 +11,4 @@ app.use(bodyParser.json());
 app.use("/api/", router);
 
 // === run app == //
-app.listen(8000, () => console.log(`Example app running!`))
+app.listen(8000, () => console.log(`Example app running!`));
