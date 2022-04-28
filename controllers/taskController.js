@@ -14,11 +14,11 @@ export const postTask = async (req, res) => {
 }
 
 export const deleteTask = async (req, res) => {
-    const todoItems = todoItems.filter(d => d.index != +req.params.id)
+    const todoItems = todoItems.filter(item => item.index != +req.params.id)
     return res.json({ data: todoItems, status: 'success' })
 }
 
 export const patchTask = async (req, res) => {
-    todoItems.filter(d => d.index == +req.params.id)[0].done = req.body.done
+    todoItems.filter(item => item.index == +req.params.id)[0].done = req.body.done
     return res.json({ data: todoItems, status: 'success' })
 }
